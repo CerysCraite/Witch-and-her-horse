@@ -26,13 +26,6 @@ public class CombinationRitual : MonoBehaviour
 
             Debug.Log("starting ritual");
 
-            //foundation colour change
-            GameObject[] colourableObjects = GameObject.FindGameObjectsWithTag("Colourable");
-            foreach (GameObject i in colourableObjects)
-            {
-                i.transform.GetComponent<SpriteRenderer>().material = Materials.materials[essence.essenceMaterial];
-            }
-
             //reagent changes
             if (reagent.reagentHead != null)
             {
@@ -75,6 +68,13 @@ public class CombinationRitual : MonoBehaviour
                 GameObject.Instantiate(newTail, tailAnchor);
             if (newMark)
                 GameObject.Instantiate(newMark, markAnchor);
+
+            //foundation colour change
+            GameObject[] colourableObjects = GameObject.FindGameObjectsWithTag("Colourable");
+            foreach (GameObject i in colourableObjects)
+            {
+                i.transform.GetComponent<SpriteRenderer>().material = Materials.materials[essence.essenceMaterial];
+            }
         }
     }
 }

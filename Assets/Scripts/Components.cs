@@ -61,8 +61,13 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("pumpkin latte",
                                                           4,
-                                                          null, null, null,
-                                                          null, null, null)
+                                                          horseVariants[6], horseVariants[7], horseVariants[8],
+                                                          null, horseVariants[9], null),
+
+                                  new AlchemicalComponent("cinnamon",
+                                                          5,
+                                                          horseVariants[10], horseVariants[11], null,
+                                                          null, null, horseVariants[12])
         };
 
         DontDestroyOnLoad(this);

@@ -461,6 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99aaf86154bca5499b70419e72fbd6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnlockComponent
+  components: {fileID: 0}
 --- !u!1 &580523409
 GameObject:
   m_ObjectHideFlags: 0
