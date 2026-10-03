@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Colourable
+  - Head
+  - Body
+  - Tail
+  - Mark
   layers:
   - Default
   - TransparentFX
@@ -43,6 +48,18 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tail
+    uniqueID: 1069457563
+    locked: 0
+  - name: Body
+    uniqueID: 397935067
+    locked: 0
+  - name: Head
+    uniqueID: 4158303811
+    locked: 0
+  - name: Mark
+    uniqueID: 617640811
     locked: 0
   m_RenderingLayers:
   - Default
