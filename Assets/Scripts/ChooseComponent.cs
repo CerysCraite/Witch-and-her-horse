@@ -6,9 +6,11 @@ public class ChooseComponent : MonoBehaviour
 {
     CombinationRitual ritualScript;
     TMP_Dropdown dropdownMenu;
+    public Components components;
 
     private void Start()
     {
+        components = FindAnyObjectByType<Components>();
         ritualScript = GameObject.FindAnyObjectByType<CombinationRitual>();
         dropdownMenu = transform.GetComponent<TMP_Dropdown>();
         dropdownMenu.ClearOptions();
@@ -19,7 +21,7 @@ public class ChooseComponent : MonoBehaviour
     {
         if (dropdownMenu.value >= 1)
         {
-            ritualScript.essence = Components.unlockedComponents[dropdownMenu.value - 1];
+            ritualScript.essence = components.unlockedComponents[dropdownMenu.value - 1];
             Debug.Log(ritualScript.essence.componentName + " as essence");
         }
         else
@@ -31,7 +33,7 @@ public class ChooseComponent : MonoBehaviour
     {
         if (dropdownMenu.value >= 1)
         {
-            ritualScript.reagent = Components.unlockedComponents[dropdownMenu.value - 1];
+            ritualScript.reagent = components.unlockedComponents[dropdownMenu.value - 1];
             Debug.Log(ritualScript.reagent.componentName + " as reagent");
         }
             
@@ -44,7 +46,7 @@ public class ChooseComponent : MonoBehaviour
     {
         if (dropdownMenu.value >= 1)
         {
-            ritualScript.catalyst = Components.unlockedComponents[dropdownMenu.value - 1];
+            ritualScript.catalyst = components.unlockedComponents[dropdownMenu.value - 1];
             Debug.Log(ritualScript.catalyst.componentName + " as catalyst");
         }
         else

@@ -2,11 +2,19 @@ using UnityEngine;
 
 public class UnlockComponent : MonoBehaviour
 {
+    public Components components;
+
+    private void Start()
+    {
+        components = FindAnyObjectByType<Components>();
+    }
+
+
     public void UnlockNewComponent(AlchemicalComponent newComponent)
     {
         bool unlocked = false;
         int lastElemIndex = 0;
-        foreach (AlchemicalComponent i in Components.unlockedComponents)
+        foreach (AlchemicalComponent i in components.unlockedComponents)
         {
             if (i != null)
                 lastElemIndex++;
@@ -19,15 +27,18 @@ public class UnlockComponent : MonoBehaviour
 
         if (unlocked == false)
         {
-            Components.unlockedComponents[lastElemIndex] = newComponent;
-            Components.availableComponents.Add(Components.unlockedComponents[lastElemIndex].componentName);
+            Debug.Log(lastElemIndex + " unlocking " + newComponent.componentName);
+            components.unlockedComponents[lastElemIndex] = newComponent;
+            Debug.Log(components.unlockedComponents[lastElemIndex]);
+            Components.availableComponents.Add(components.unlockedComponents[lastElemIndex].componentName);
         }
 
     }
 
+    
+
     public void Test()
     {
-        UnlockNewComponent(Components.alchemicalComponents[1]);
-        Debug.Log(Components.alchemicalComponents[1].essenceMaterial);
+        UnlockNewComponent(components.alchemicalComponents[Random.Range(0, components.alchemicalComponents.Length)]);
     }
 }

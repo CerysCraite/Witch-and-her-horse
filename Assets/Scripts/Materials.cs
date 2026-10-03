@@ -10,7 +10,6 @@ public class Materials : MonoBehaviour
         for (int i = 0; i < materialReferences.Length; i++)
         {
             materials[i] = materialReferences[i];
-            Debug.Log(materials[i]);
         }
 
     }  

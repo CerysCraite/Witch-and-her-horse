@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1463942730202419281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8256556872335235568}
+  - component: {fileID: 6942349453006996425}
+  - component: {fileID: 5091053498340022931}
+  m_Layer: 0
+  m_Name: DataKeeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8256556872335235568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463942730202419281}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6942349453006996425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463942730202419281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308c059e935256449a9d8235a85f5d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Materials
+  materialReferences:
+  - {fileID: 2100000, guid: 9001f5de297b7fe47b797121110ecac0, type: 2}
+  - {fileID: 2100000, guid: d92cba58e8f4f614087131650ce47385, type: 2}
+  - {fileID: 2100000, guid: 24959408538c47d4fb7496b278478e8c, type: 2}
+  - {fileID: 2100000, guid: 8137fb9283633b54dbfa866591c0dac3, type: 2}
+  - {fileID: 2100000, guid: 3f31c7aabb08ef948bfe86b1306bd73b, type: 2}
+--- !u!114 &5091053498340022931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463942730202419281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b40a4c0d0bf66b499571117cc6d9431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Components
+  horseVariants:
+  - {fileID: 2666104411618298691, guid: 9cbc196f2db241743863fdf106fbd86a, type: 3}
+  - {fileID: 1474754778805768500, guid: 0935d309d23d13242bc9da15c4079384, type: 3}
+  - {fileID: 4566569410793270627, guid: 1df1646641ec9eb4db9a7f582f54dd8c, type: 3}
+  - {fileID: 8453156584410044513, guid: d88adf30af3cc8847849191ea59af2f0, type: 3}
+  - {fileID: 4828163891583253280, guid: 663a1336d6014264b817c44f2dbc57f9, type: 3}
+  - {fileID: 9167877322115928760, guid: afa9268fe01d7d2459584a354df1d319, type: 3}

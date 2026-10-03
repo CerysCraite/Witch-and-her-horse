@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,22 +29,43 @@ public class AlchemicalComponent
 
 public class Components : MonoBehaviour
 {
-    public static AlchemicalComponent[] alchemicalComponents = new AlchemicalComponent[]
-        {new AlchemicalComponent("jackolantern",
-                                  0,
-                                  null, null, null,
-                                  null, null, null),
+    public AlchemicalComponent[] alchemicalComponents = new AlchemicalComponent[13];
+    public GameObject[] horseVariants; 
+     
+    public AlchemicalComponent[] unlockedComponents = new AlchemicalComponent[13];
+    public static List<string> availableComponents = new List<string> {null};
 
-        new AlchemicalComponent("acorn",
-                                  1,
-                                  null, null, null,
-                                  null, null, null),
-        new AlchemicalComponent("apple",
-                                  1,
-                                  null, null, null,
-                                  null, null, null),
+    private void Start()
+    {
+        Debug.Log("fuck");
+        alchemicalComponents = new AlchemicalComponent[]{
+                                  new AlchemicalComponent("jackolantern",
+                                                          0,
+                                                          null, horseVariants[1], horseVariants[2],
+                                                          horseVariants[0], null, null),
+
+                                  new AlchemicalComponent("chamomile tea",
+                                                          1,
+                                                          null, null, null,
+                                                          null, null, null),
+
+                                  new AlchemicalComponent("marshmallow",
+                                                          2,
+                                                          null, null, null,
+                                                          null, null, null),
+
+                                  new AlchemicalComponent("apple",
+                                                          3,
+                                                          horseVariants[3], horseVariants[4], null,
+                                                          null, null, horseVariants[5]),
+
+                                  new AlchemicalComponent("pumpkin latte",
+                                                          4,
+                                                          null, null, null,
+                                                          null, null, null)
         };
 
-    public static AlchemicalComponent[] unlockedComponents = new AlchemicalComponent[alchemicalComponents.Length];
-    public static List<string> availableComponents = new List<string> {null};
+        DontDestroyOnLoad(this);
+    }
+
 }

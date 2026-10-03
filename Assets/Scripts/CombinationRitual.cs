@@ -8,19 +8,22 @@ public class CombinationRitual : MonoBehaviour
     public AlchemicalComponent essence, reagent, catalyst;
 
     [SerializeField] GameObject horse; 
-    Transform headAnchor, tailAnchor, markAnchor;
+    Transform headAnchor, tailAnchor, markAnchor, bodyAnchor;
 
     private void Start()
     {
         headAnchor = horse.transform.GetChild(0);
         tailAnchor = horse.transform.GetChild(1);
         markAnchor = horse.transform.GetChild(2);
+        bodyAnchor = horse.transform.GetChild(3);
     }
 
     public void Combine()
     {
         if (essence != null && reagent != null && catalyst != null)
         {
+            GameObject newHead = null, newBody = null, newTail = null, newMark = null;
+
             Debug.Log("starting ritual");
 
             //foundation colour change
@@ -34,35 +37,44 @@ public class CombinationRitual : MonoBehaviour
             if (reagent.reagentHead != null)
             {
                 GameObject.Destroy(GameObject.FindGameObjectWithTag("Head"));
-                GameObject.Instantiate(reagent.reagentHead, headAnchor);
+                newHead = reagent.reagentHead;
             }
             if (reagent.reagentBody != null)
             {
                 GameObject.Destroy(GameObject.FindGameObjectWithTag("Body"));
-                GameObject.Instantiate(reagent.reagentBody, horse.transform);
+                newBody = reagent.reagentBody;
             }
             if (reagent.reagentTail != null)
             {
                 GameObject.Destroy(GameObject.FindGameObjectWithTag("Tail"));
-                GameObject.Instantiate(reagent.reagentTail, tailAnchor);
+                newTail = reagent.reagentTail;
             }
 
             //catalyst changes
             if (catalyst.catalystHead != null)
             {
                 GameObject.Destroy(GameObject.FindGameObjectWithTag("Head"));
-                GameObject.Instantiate(catalyst.catalystHead, headAnchor);
+                newHead = catalyst.catalystHead;               
             }
             if (catalyst.catalystMark != null)
             {
                 GameObject.Destroy(GameObject.FindGameObjectWithTag("Mark"));
-                GameObject.Instantiate(catalyst.catalystMark, markAnchor);
+                newMark = catalyst.catalystMark;
             }
             if (catalyst.catalystTail != null)
             {
                 GameObject.Destroy(GameObject.FindGameObjectWithTag("Tail"));
-                GameObject.Instantiate(catalyst.catalystTail, tailAnchor);
+                newTail = catalyst.catalystTail;
             }
+
+            if (newHead)
+                GameObject.Instantiate(newHead, headAnchor);
+            if (newBody)
+                GameObject.Instantiate(newBody, bodyAnchor);
+            if (newTail)
+                GameObject.Instantiate(newTail, tailAnchor);
+            if (newMark)
+                GameObject.Instantiate(newMark, markAnchor);
         }
     }
 }
