@@ -52,7 +52,7 @@ public class Components : MonoBehaviour
                                   new AlchemicalComponent("chamomile tea",
                                                           1, "girl",
                                                           headVariants[1], bodyVariants[1], null,
-                                                          null, null, tailVariants[1]),
+                                                          null, markVariants[0], tailVariants[1]),
 
                                   new AlchemicalComponent("marshmallow",
                                                           2, "horse",
@@ -67,12 +67,12 @@ public class Components : MonoBehaviour
                                   new AlchemicalComponent("pumpkin latte",
                                                           4, "girl",
                                                           headVariants[4], bodyVariants[4], tailVariants[4],
-                                                          null, markVariants[0], null),
+                                                          null, markVariants[1], null),
 
                                   new AlchemicalComponent("ghost cookies",
                                                           5, "horse",
                                                           headVariants[5], bodyVariants[5], tailVariants[5],
-                                                          null, markVariants[1], tailVariants[5]),
+                                                          null, markVariants[2], tailVariants[5]),
 
                                   new AlchemicalComponent("scented candles",
                                                           6, "horse",
@@ -92,7 +92,7 @@ public class Components : MonoBehaviour
                                   new AlchemicalComponent("honeycomb",
                                                           9, "horse",
                                                           headVariants[9], bodyVariants[9], tailVariants[9],
-                                                          null, null, null),
+                                                          null, markVariants[3], null),
 
                                   new AlchemicalComponent("cinnamon",
                                                           10, "horse",
