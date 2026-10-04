@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 7a17ac5ef7e85274f97c70899ca04865
+guid: aa5a4b8f96223bd4d945e06e35070090
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3756446688473567165
-    second: border2_0
-  - first:
-      213: 8037457898829815151
-    second: border2_1
+      213: 8762952677643603340
+    second: screen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,45 +102,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: border2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1106
-        width: 1920
-        height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 34037dba3ab6edbc0800000000000000
-      internalID: -3756446688473567165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: border2_1
+      name: screen_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1920
-        height: 94
+        height: 1200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6d98ecef59ca8f60800000000000000
-      internalID: 8037457898829815151
+      spriteID: c8d418e38034c9970800000000000000
+      internalID: 8762952677643603340
       vertices: []
       indices: 
       edges: []
@@ -152,7 +127,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,14 +135,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
-      - key: SpriteEditor.SliceOnImport
-        value: False
+      entries: []
     nameFileIdTable:
-      border2_0: -3756446688473567165
-      border2_1: 8037457898829815151
+      screen_0: 8762952677643603340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
