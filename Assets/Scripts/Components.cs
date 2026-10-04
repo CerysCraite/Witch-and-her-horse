@@ -74,8 +74,8 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("scented candles",
                                                           6,
-                                                          null, null, null,
-                                                          null, null, null),
+                                                          headVariants[6], bodyVariants[6], null,
+                                                          null, null, tailVariants[6]),
 
                                   new AlchemicalComponent("mushrooms",
                                                           7,
@@ -84,8 +84,8 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("flaming skull",
                                                           8,
-                                                          null, bodyVariants[5], tailVariants[5],
-                                                          headVariants[5], null, null),
+                                                          null, bodyVariants[8], tailVariants[8],
+                                                          headVariants[8], null, null),
 
                                   new AlchemicalComponent("honeycomb",
                                                           9,
@@ -94,13 +94,13 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("cinnamon",
                                                           10,
-                                                          headVariants[6], bodyVariants[6], null,
+                                                          headVariants[10], bodyVariants[10], null,
                                                           null, null, tailVariants[6]),
 
                                   new AlchemicalComponent("lime",
                                                           11,
-                                                          headVariants[7], bodyVariants[7], null,
-                                                          null, null, tailVariants[7]),
+                                                          headVariants[11], bodyVariants[11], null,
+                                                          null, null, tailVariants[11]),
         };
 
         DontDestroyOnLoad(this);
