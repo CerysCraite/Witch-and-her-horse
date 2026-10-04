@@ -13,6 +13,11 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("Ritual");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void Quitl()
     {
         Application.Quit();
