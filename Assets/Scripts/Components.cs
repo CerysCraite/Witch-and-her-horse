@@ -30,8 +30,11 @@ public class AlchemicalComponent
 public class Components : MonoBehaviour
 {
     public AlchemicalComponent[] alchemicalComponents = new AlchemicalComponent[13];
-    public GameObject[] horseVariants; 
-     
+    public GameObject[] headVariants;
+    public GameObject[] bodyVariants;
+    public GameObject[] tailVariants;
+    public GameObject[] markVariants;
+
     public AlchemicalComponent[] unlockedComponents = new AlchemicalComponent[13];
     public static List<string> availableComponents = new List<string> {null};
 
@@ -41,28 +44,28 @@ public class Components : MonoBehaviour
         alchemicalComponents = new AlchemicalComponent[]{
                                   new AlchemicalComponent("jackolantern",
                                                           0,
-                                                          null, horseVariants[1], horseVariants[2],
-                                                          horseVariants[0], null, null),
+                                                          null, bodyVariants[0], tailVariants[0],
+                                                          headVariants[0], null, null),
 
                                   new AlchemicalComponent("chamomile tea",
                                                           1,
-                                                          horseVariants[3], horseVariants[4], null,
-                                                          null, null, horseVariants[5]),
+                                                          headVariants[1], bodyVariants[1], null,
+                                                          null, null, tailVariants[1]),
 
                                   new AlchemicalComponent("marshmallow",
                                                           2,
-                                                          horseVariants[6], horseVariants[7], null,
-                                                          null, null, horseVariants[8]),
+                                                          headVariants[2], bodyVariants[2], null,
+                                                          null, null, tailVariants[2]),
 
                                   new AlchemicalComponent("apple",
                                                           3,
-                                                          horseVariants[9], horseVariants[10], null,
-                                                          null, null, horseVariants[11]),
+                                                          headVariants[3], bodyVariants[3], null,
+                                                          null, null, tailVariants[3]),
 
                                   new AlchemicalComponent("pumpkin latte",
                                                           4,
-                                                          horseVariants[12], horseVariants[13], horseVariants[14],
-                                                          null, horseVariants[15], null),
+                                                          headVariants[4], bodyVariants[4], tailVariants[4],
+                                                          null, markVariants[0], null),
 
                                   new AlchemicalComponent("ghost cookies",
                                                           5,
@@ -81,8 +84,8 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("flaming skull",
                                                           8,
-                                                          null, horseVariants[17], horseVariants[18],
-                                                          horseVariants[16], null, null),
+                                                          null, bodyVariants[5], tailVariants[5],
+                                                          headVariants[5], null, null),
 
                                   new AlchemicalComponent("honeycomb",
                                                           9,
@@ -91,8 +94,13 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("cinnamon",
                                                           10,
-                                                          horseVariants[19], horseVariants[20], null,
-                                                          null, null, horseVariants[21]),
+                                                          headVariants[6], bodyVariants[6], null,
+                                                          null, null, tailVariants[6]),
+
+                                  new AlchemicalComponent("lime",
+                                                          11,
+                                                          headVariants[7], bodyVariants[7], null,
+                                                          null, null, tailVariants[7]),
         };
 
         DontDestroyOnLoad(this);
