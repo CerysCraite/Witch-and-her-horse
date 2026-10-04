@@ -103,6 +103,11 @@ public class Components : MonoBehaviour
                                                           11, "small",
                                                           headVariants[11], bodyVariants[11], null,
                                                           null, null, tailVariants[11]),
+
+                                  new AlchemicalComponent("tarantula plushie",
+                                                          12, "horse",
+                                                          headVariants[12], bodyVariants[12], null,
+                                                          null, null, tailVariants[12]),
         };
 
         DontDestroyOnLoad(this);
