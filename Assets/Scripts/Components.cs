@@ -91,8 +91,8 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("honeycomb",
                                                           9, "horse",
-                                                          null, null, null,
-                                                          null, null, null),
+                                                          headVariants[9], bodyVariants[9], tailVariants[9],
+                                                          null, markVariants[1], null),
 
                                   new AlchemicalComponent("cinnamon",
                                                           10, "horse",
