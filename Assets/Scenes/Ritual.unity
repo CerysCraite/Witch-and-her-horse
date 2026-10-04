@@ -1623,7 +1623,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 67686905}
         m_TargetAssemblyTypeName: CombinationRitual, Assembly-CSharp
-        m_MethodName: Combine
+        m_MethodName: StartEnchant
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2051,7 +2051,7 @@ GameObject:
   - component: {fileID: 1862789164}
   - component: {fileID: 1862789163}
   m_Layer: 0
-  m_Name: smoke
+  m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4382,7 +4382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326510172132769009, guid: c33f0eb39f8253b45a5ced783c1c4ff0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326510172132769009, guid: c33f0eb39f8253b45a5ced783c1c4ff0, type: 3}
       propertyPath: m_LocalPosition.z

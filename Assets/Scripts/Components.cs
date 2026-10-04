@@ -56,8 +56,8 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("chamomile tea",
                                                           1, "girl",
-                                                          headVariants[1], bodyVariants[1], null,
-                                                          null, markVariants[0], tailVariants[1],
+                                                          headVariants[1], bodyVariants[1], tailVariants[1],
+                                                          null, markVariants[0], null,
                                                           componentIcons[1]),
 
                                   new AlchemicalComponent("marshmallow",

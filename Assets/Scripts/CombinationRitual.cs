@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,11 +13,13 @@ public class CombinationRitual : MonoBehaviour
     [SerializeField] GameObject horseSmall;
     string currentFrame = "horse";
     GameObject horse;
+    ParticleSystem smoke;
     Transform headAnchor, tailAnchor, markAnchor, bodyAnchor;
 
     private void Start()
     {
         GetHorseFrame(GameObject.FindGameObjectWithTag("Horse"));
+        smoke = GameObject.Find("Smoke").GetComponent<ParticleSystem>();
     }
 
     public void GetHorseFrame(GameObject newHorse)
@@ -27,7 +30,7 @@ public class CombinationRitual : MonoBehaviour
         markAnchor = horse.transform.GetChild(2);
         bodyAnchor = horse.transform.GetChild(3);
     }
-
+    
     public void Combine()
     {
         if (essence != null && reagent != null && catalyst != null)
@@ -94,6 +97,8 @@ public class CombinationRitual : MonoBehaviour
             }
 
             Debug.Log("spawning parts");
+            smoke.Play();
+
             if(newFrame)
             {
                 var newHorse = GameObject.Instantiate(newFrame);
