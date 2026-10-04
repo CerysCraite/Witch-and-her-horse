@@ -113,17 +113,17 @@ public class CombinationRitual : MonoBehaviour
                     GameObject.Instantiate(newBody, bodyAnchor);
                 else
                 {
-                    var body = GameObject.FindGameObjectWithTag("Head");
-                    body.transform.position = headAnchor.position;
-                    body.transform.parent = headAnchor;
+                    var body = GameObject.FindGameObjectWithTag("Body");
+                    body.transform.position = bodyAnchor.position;
+                    body.transform.parent = bodyAnchor;
                 }
                 if (newTail)
                     GameObject.Instantiate(newTail, tailAnchor);
                 else
                 {
                     var tail = GameObject.FindGameObjectWithTag("Tail");
-                    tail.transform.position = headAnchor.position;
-                    tail.transform.parent = headAnchor;
+                    tail.transform.position = tailAnchor.position;
+                    tail.transform.parent = tailAnchor;
                 }
                 if (newMark)
                     GameObject.Instantiate(newMark, markAnchor);
@@ -132,8 +132,8 @@ public class CombinationRitual : MonoBehaviour
                     var mark = GameObject.FindGameObjectWithTag("Mark");
                     if(mark)
                     {
-                        mark.transform.position = headAnchor.position;
-                        mark.transform.parent = headAnchor;
+                        mark.transform.position = markAnchor.position;
+                        mark.transform.parent = markAnchor;
                     }              
                 }
             }
