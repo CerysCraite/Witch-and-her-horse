@@ -18,7 +18,7 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void Quitl()
+    public void Quit()
     {
         Application.Quit();
     }
