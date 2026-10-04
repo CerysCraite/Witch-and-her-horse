@@ -1176,6 +1176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetHorse
   horse: {fileID: 1796530738}
+  horseFrame: {fileID: 7395104670393429167, guid: c33f0eb39f8253b45a5ced783c1c4ff0, type: 3}
   baseHead: {fileID: 260076600309573059, guid: 13651a77d82ed27498ae9f975a4fb9ee, type: 3}
   baseBody: {fileID: 1266673155486356116, guid: 91b7403b0d77f3e4e9a1579bcf823d1d, type: 3}
   baseTail: {fileID: 6811647880257620332, guid: f916fba198b30b146b2786d18b246210, type: 3}
@@ -1623,7 +1624,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 67686905}
         m_TargetAssemblyTypeName: CombinationRitual, Assembly-CSharp
-        m_MethodName: StartEnchant
+        m_MethodName: Combine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
