@@ -81,8 +81,8 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("mushrooms",
                                                           7, "horse",
-                                                          null, null, null,
-                                                          null, null, null),
+                                                          null, bodyVariants[7], tailVariants[7],
+                                                          headVariants[7], null, null),
 
                                   new AlchemicalComponent("flaming skull",
                                                           8, "horse",
