@@ -1,12 +1,13 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class ChooseComponent : MonoBehaviour
 {
     CombinationRitual ritualScript;
     TMP_Dropdown dropdownMenu;
     public Components components;
+    Image selectedIcon;
 
     private void Start()
     {
@@ -15,6 +16,8 @@ public class ChooseComponent : MonoBehaviour
         dropdownMenu = transform.GetComponent<TMP_Dropdown>();
         dropdownMenu.ClearOptions();
         dropdownMenu.AddOptions(Components.availableComponents);
+        selectedIcon = transform.GetChild(0).GetComponent<Image>();
+        selectedIcon.enabled = false;
     }
 
     public void ChooseEssence()
@@ -23,9 +26,15 @@ public class ChooseComponent : MonoBehaviour
         {
             ritualScript.essence = components.unlockedComponents[dropdownMenu.value - 1];
             Debug.Log(ritualScript.essence.componentName + " as essence");
+            selectedIcon.enabled = true;
+            selectedIcon.sprite = ritualScript.essence.componentIcon;
         }
         else
+        {
             ritualScript.essence = null;
+            selectedIcon.enabled = false;
+        }
+            
         
     }
 
@@ -35,10 +44,16 @@ public class ChooseComponent : MonoBehaviour
         {
             ritualScript.reagent = components.unlockedComponents[dropdownMenu.value - 1];
             Debug.Log(ritualScript.reagent.componentName + " as reagent");
+            selectedIcon.enabled = true;
+            selectedIcon.sprite = ritualScript.reagent.componentIcon;
         }
             
         else
+        {
             ritualScript.reagent = null;
+            selectedIcon.enabled = false;
+        }
+            
         
     }
 
@@ -48,8 +63,14 @@ public class ChooseComponent : MonoBehaviour
         {
             ritualScript.catalyst = components.unlockedComponents[dropdownMenu.value - 1];
             Debug.Log(ritualScript.catalyst.componentName + " as catalyst");
+            selectedIcon.enabled = true;
+            selectedIcon.sprite = ritualScript.catalyst.componentIcon;
         }
         else
+        {
             ritualScript.catalyst = null;
+            selectedIcon.enabled = false;
+        }
+            
     }
 }
