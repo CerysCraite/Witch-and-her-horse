@@ -6,6 +6,7 @@ public class AlchemicalComponent
 {
     public string componentName;
     public int essenceMaterial;
+    public string bodyFrame;
     public GameObject reagentHead;
     public GameObject reagentBody;
     public GameObject reagentTail;
@@ -13,10 +14,11 @@ public class AlchemicalComponent
     public GameObject catalystMark;
     public GameObject catalystTail;
 
-    public AlchemicalComponent(string name, int essenceColour, GameObject reagentAddHead, GameObject reagentAddBody, GameObject reagentAddTail, GameObject catalystAddHead, GameObject catalystAddMark, GameObject catalystAddTail)
+    public AlchemicalComponent(string name, int essenceColour, string horseFrame, GameObject reagentAddHead, GameObject reagentAddBody, GameObject reagentAddTail, GameObject catalystAddHead, GameObject catalystAddMark, GameObject catalystAddTail)
     {
         componentName = name;
         essenceMaterial = essenceColour;
+        bodyFrame = horseFrame;
         reagentHead = reagentAddHead;
         reagentBody = reagentAddBody;
         reagentTail = reagentAddTail;
@@ -43,62 +45,62 @@ public class Components : MonoBehaviour
         Debug.Log("fuck");
         alchemicalComponents = new AlchemicalComponent[]{
                                   new AlchemicalComponent("jackolantern",
-                                                          0,
+                                                          0, "horse",
                                                           null, bodyVariants[0], tailVariants[0],
                                                           headVariants[0], null, null),
 
                                   new AlchemicalComponent("chamomile tea",
-                                                          1,
+                                                          1, "girl",
                                                           headVariants[1], bodyVariants[1], null,
                                                           null, null, tailVariants[1]),
 
                                   new AlchemicalComponent("marshmallow",
-                                                          2,
+                                                          2, "horse",
                                                           headVariants[2], bodyVariants[2], null,
                                                           null, null, tailVariants[2]),
 
                                   new AlchemicalComponent("apple",
-                                                          3,
+                                                          3, "horse",
                                                           headVariants[3], bodyVariants[3], null,
                                                           null, null, tailVariants[3]),
 
                                   new AlchemicalComponent("pumpkin latte",
-                                                          4,
+                                                          4, "girl",
                                                           headVariants[4], bodyVariants[4], tailVariants[4],
                                                           null, markVariants[0], null),
 
                                   new AlchemicalComponent("ghost cookies",
-                                                          5,
+                                                          5, "horse",
                                                           null, null, null,
                                                           null, null, null),
 
                                   new AlchemicalComponent("scented candles",
-                                                          6,
+                                                          6, "horse",
                                                           headVariants[6], bodyVariants[6], null,
                                                           null, null, tailVariants[6]),
 
                                   new AlchemicalComponent("mushrooms",
-                                                          7,
+                                                          7, "horse",
                                                           null, null, null,
                                                           null, null, null),
 
                                   new AlchemicalComponent("flaming skull",
-                                                          8,
+                                                          8, "horse",
                                                           null, bodyVariants[8], tailVariants[8],
                                                           headVariants[8], null, null),
 
                                   new AlchemicalComponent("honeycomb",
-                                                          9,
+                                                          9, "horse",
                                                           null, null, null,
                                                           null, null, null),
 
                                   new AlchemicalComponent("cinnamon",
-                                                          10,
+                                                          10, "horse",
                                                           headVariants[10], bodyVariants[10], null,
                                                           null, null, tailVariants[6]),
 
                                   new AlchemicalComponent("lime",
-                                                          11,
+                                                          11, "small",
                                                           headVariants[11], bodyVariants[11], null,
                                                           null, null, tailVariants[11]),
         };

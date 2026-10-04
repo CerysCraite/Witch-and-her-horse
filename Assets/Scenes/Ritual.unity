@@ -332,7 +332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3da64fd05641c4fbe5076eec0b8f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombinationRitual
-  horse: {fileID: 1796530738}
+  horseMain: {fileID: 7395104670393429167, guid: c33f0eb39f8253b45a5ced783c1c4ff0, type: 3}
+  horseGirl: {fileID: 7395104670393429167, guid: 254ca027292104f41885647e4d96a211, type: 3}
+  horseSmall: {fileID: 7395104670393429167, guid: f2227118d58c3d34a91b414359ce211d, type: 3}
 --- !u!1 &145099771
 GameObject:
   m_ObjectHideFlags: 0

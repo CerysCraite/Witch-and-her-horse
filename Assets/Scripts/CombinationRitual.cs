@@ -7,11 +7,21 @@ public class CombinationRitual : MonoBehaviour
 {
     public AlchemicalComponent essence, reagent, catalyst;
 
-    [SerializeField] GameObject horse; 
+    [SerializeField] GameObject horseMain;
+    [SerializeField] GameObject horseGirl;
+    [SerializeField] GameObject horseSmall;
+    string currentFrame = "horse";
+    GameObject horse;
     Transform headAnchor, tailAnchor, markAnchor, bodyAnchor;
 
     private void Start()
     {
+        GetHorseFrame(GameObject.FindGameObjectWithTag("Horse"));
+    }
+
+    public void GetHorseFrame(GameObject newHorse)
+    {
+        horse = newHorse;
         headAnchor = horse.transform.GetChild(0);
         tailAnchor = horse.transform.GetChild(1);
         markAnchor = horse.transform.GetChild(2);
@@ -22,7 +32,7 @@ public class CombinationRitual : MonoBehaviour
     {
         if (essence != null && reagent != null && catalyst != null)
         {
-            GameObject newHead = null, newBody = null, newTail = null, newMark = null;
+            GameObject newHead = null, newBody = null, newTail = null, newMark = null, newFrame = null;
 
             Debug.Log("starting ritual");
 
@@ -42,6 +52,29 @@ public class CombinationRitual : MonoBehaviour
                 GameObject.Destroy(GameObject.FindGameObjectWithTag("Tail"));
                 newTail = reagent.reagentTail;
             }
+            if (reagent.bodyFrame != currentFrame)
+            {
+                GameObject.Destroy(horse);
+
+                if (reagent.bodyFrame == "horse")
+                {
+                    newFrame = horseMain;
+                    currentFrame = "horse";
+                }
+                    
+                else if (reagent.bodyFrame == "girl")
+                {
+                    newFrame = horseGirl;
+                    currentFrame = "girl";
+                }
+                    
+                else if (reagent.bodyFrame == "small")
+                {
+                    newFrame = horseSmall;
+                    currentFrame = "small";
+                }
+                    
+            }
 
             //catalyst changes
             if (catalyst.catalystHead != null)
@@ -60,14 +93,62 @@ public class CombinationRitual : MonoBehaviour
                 newTail = catalyst.catalystTail;
             }
 
-            if (newHead)
-                GameObject.Instantiate(newHead, headAnchor);
-            if (newBody)
-                GameObject.Instantiate(newBody, bodyAnchor);
-            if (newTail)
-                GameObject.Instantiate(newTail, tailAnchor);
-            if (newMark)
-                GameObject.Instantiate(newMark, markAnchor);
+            Debug.Log("spawning parts");
+            if(newFrame)
+            {
+                var newHorse = GameObject.Instantiate(newFrame);
+                GetHorseFrame(newHorse);
+
+                Debug.Log(horse.name);
+
+                if (newHead)
+                    GameObject.Instantiate(newHead, headAnchor);
+                else
+                {
+                    var head = GameObject.FindGameObjectWithTag("Head");
+                    head.transform.position = headAnchor.position;
+                    head.transform.parent = headAnchor;
+                }
+                if (newBody)
+                    GameObject.Instantiate(newBody, bodyAnchor);
+                else
+                {
+                    var body = GameObject.FindGameObjectWithTag("Head");
+                    body.transform.position = headAnchor.position;
+                    body.transform.parent = headAnchor;
+                }
+                if (newTail)
+                    GameObject.Instantiate(newTail, tailAnchor);
+                else
+                {
+                    var tail = GameObject.FindGameObjectWithTag("Tail");
+                    tail.transform.position = headAnchor.position;
+                    tail.transform.parent = headAnchor;
+                }
+                if (newMark)
+                    GameObject.Instantiate(newMark, markAnchor);
+                else
+                {
+                    var mark = GameObject.FindGameObjectWithTag("Mark");
+                    if(mark)
+                    {
+                        mark.transform.position = headAnchor.position;
+                        mark.transform.parent = headAnchor;
+                    }              
+                }
+            }
+            else
+            {
+                if (newHead)
+                    GameObject.Instantiate(newHead, headAnchor);
+                if (newBody)
+                    GameObject.Instantiate(newBody, bodyAnchor);
+                if (newTail)
+                    GameObject.Instantiate(newTail, tailAnchor);
+                if (newMark)
+                    GameObject.Instantiate(newMark, markAnchor);
+            }
+            
 
             //foundation colour change
             GameObject[] colourableObjects = GameObject.FindGameObjectsWithTag("Colourable");

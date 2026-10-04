@@ -9,6 +9,7 @@ TagManager:
   - Body
   - Tail
   - Mark
+  - Horse
   layers:
   - Default
   - TransparentFX
