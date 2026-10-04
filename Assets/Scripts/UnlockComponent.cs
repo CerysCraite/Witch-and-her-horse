@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class UnlockComponent : MonoBehaviour
 {
     public Components components;
-    Clock clock;
     Transform earth;
 
     AlchemicalComponent[] lockedComponents;
@@ -29,12 +28,12 @@ public class UnlockComponent : MonoBehaviour
     private void Start()
     {
         components = FindAnyObjectByType<Components>();
-        clock = FindAnyObjectByType<Clock>();
         earth = GameObject.Find("Earth").transform;
         iconDisplay = transform.GetChild(1).gameObject;
         iconDisplay.SetActive(false);
         text = transform.GetChild(0).gameObject;
         foundItem = transform.GetChild(2).gameObject;
+        foundItem.SetActive(false);
 
         lockedComponents = components.alchemicalComponents;
 
@@ -60,7 +59,6 @@ public class UnlockComponent : MonoBehaviour
         else if (searching)
         {
             searching = false;
-            clock.clockSpeed -= speedIncrease;
             currDuration = 0;
             iconDisplay.SetActive(false);
             foundItem.SetActive(true);           
@@ -106,6 +104,5 @@ public class UnlockComponent : MonoBehaviour
         iconDisplay.GetComponent<Image>().color = Color.black;
         text.SetActive(false);
         foundItem.SetActive(false);
-        clock.clockSpeed += speedIncrease;
     }
 }
