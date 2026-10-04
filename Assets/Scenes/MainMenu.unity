@@ -644,22 +644,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DataKeeper
       objectReference: {fileID: 0}
-    - target: {fileID: 5091053498340022931, guid: d7d467d0ecb6dbb4d85f7f583f3d33ff, type: 3}
-      propertyPath: horseVariants.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 5091053498340022931, guid: d7d467d0ecb6dbb4d85f7f583f3d33ff, type: 3}
-      propertyPath: 'horseVariants.Array.data[10]'
-      value: 
-      objectReference: {fileID: 5355936906296038166, guid: 4043f880c6e6a5146a7f0afcc5f0ec45, type: 3}
-    - target: {fileID: 5091053498340022931, guid: d7d467d0ecb6dbb4d85f7f583f3d33ff, type: 3}
-      propertyPath: 'horseVariants.Array.data[11]'
-      value: 
-      objectReference: {fileID: 2611251800767145971, guid: 13bef0dfd04e51a41a583d746ee2fe4d, type: 3}
-    - target: {fileID: 5091053498340022931, guid: d7d467d0ecb6dbb4d85f7f583f3d33ff, type: 3}
-      propertyPath: 'horseVariants.Array.data[12]'
-      value: 
-      objectReference: {fileID: 3243345258666319948, guid: b7f0469aa7b240540b58480bf2a8f328, type: 3}
     - target: {fileID: 8256556872335235568, guid: d7d467d0ecb6dbb4d85f7f583f3d33ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 792.8659

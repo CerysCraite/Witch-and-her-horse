@@ -46,28 +46,53 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("chamomile tea",
                                                           1,
-                                                          null, null, null,
-                                                          null, null, null),
-
-                                  new AlchemicalComponent("marshmallow",
-                                                          2,
-                                                          null, null, null,
-                                                          null, null, null),
-
-                                  new AlchemicalComponent("apple",
-                                                          3,
                                                           horseVariants[3], horseVariants[4], null,
                                                           null, null, horseVariants[5]),
 
+                                  new AlchemicalComponent("marshmallow",
+                                                          2,
+                                                          horseVariants[6], horseVariants[7], null,
+                                                          null, null, horseVariants[8]),
+
+                                  new AlchemicalComponent("apple",
+                                                          3,
+                                                          horseVariants[9], horseVariants[10], null,
+                                                          null, null, horseVariants[11]),
+
                                   new AlchemicalComponent("pumpkin latte",
                                                           4,
-                                                          horseVariants[6], horseVariants[7], horseVariants[8],
-                                                          null, horseVariants[9], null),
+                                                          horseVariants[12], horseVariants[13], horseVariants[14],
+                                                          null, horseVariants[15], null),
+
+                                  new AlchemicalComponent("ghost cookies",
+                                                          5,
+                                                          null, null, null,
+                                                          null, null, null),
+
+                                  new AlchemicalComponent("scented candles",
+                                                          6,
+                                                          null, null, null,
+                                                          null, null, null),
+
+                                  new AlchemicalComponent("mushrooms",
+                                                          7,
+                                                          null, null, null,
+                                                          null, null, null),
+
+                                  new AlchemicalComponent("flaming skull",
+                                                          8,
+                                                          null, horseVariants[17], horseVariants[18],
+                                                          horseVariants[16], null, null),
+
+                                  new AlchemicalComponent("honeycomb",
+                                                          9,
+                                                          null, null, null,
+                                                          null, null, null),
 
                                   new AlchemicalComponent("cinnamon",
-                                                          5,
-                                                          horseVariants[10], horseVariants[11], null,
-                                                          null, null, horseVariants[12])
+                                                          10,
+                                                          horseVariants[19], horseVariants[20], null,
+                                                          null, null, horseVariants[21]),
         };
 
         DontDestroyOnLoad(this);
