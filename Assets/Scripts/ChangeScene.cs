@@ -12,4 +12,9 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("Ritual");
     }
+
+    public void Quitl()
+    {
+        Application.Quit();
+    }
 }
