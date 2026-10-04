@@ -1080,14 +1080,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DataKeeper
       objectReference: {fileID: 0}
-    - target: {fileID: 6942349453006996425, guid: d7d467d0ecb6dbb4d85f7f583f3d33ff, type: 3}
-      propertyPath: materialReferences.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 6942349453006996425, guid: d7d467d0ecb6dbb4d85f7f583f3d33ff, type: 3}
-      propertyPath: 'materialReferences.Array.data[13]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a381f22593e90bf4fa1879881fe01093, type: 2}
     - target: {fileID: 8256556872335235568, guid: d7d467d0ecb6dbb4d85f7f583f3d33ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 792.8659

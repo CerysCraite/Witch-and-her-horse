@@ -71,8 +71,8 @@ public class Components : MonoBehaviour
 
                                   new AlchemicalComponent("ghost cookies",
                                                           5, "horse",
-                                                          null, null, null,
-                                                          null, null, null),
+                                                          headVariants[5], bodyVariants[5], tailVariants[5],
+                                                          null, markVariants[1], tailVariants[5]),
 
                                   new AlchemicalComponent("scented candles",
                                                           6, "horse",
